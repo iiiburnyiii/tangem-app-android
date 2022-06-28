@@ -48,6 +48,13 @@ val mainScope = CoroutineScope(mainCoroutineContext)
 
 class MainActivity : AppCompatActivity(), SnackbarHandler {
 
+    val a = "aAAAAAAAAAaaaaaaAAAaaaAAAaaaaAAAaaAAAaaaAAAAaaAaAAAAAaaAAAAAaaAaAaaaaAaAAAaaaaAAAAaaaaAAAAaaaAAAAAaaaaaAAAAAAaaaaaaaaaaaaaaaAAAaaaaAAAaaaAAAaaaaaaa"
+
+
+
+
+
+
     private var snackbar: Snackbar? = null
     private val dialogManager = DialogManager()
     private val intentHandler = IntentHandler()
