@@ -27,11 +27,11 @@ import com.tangem.tap.features.details.redux.walletconnect.WalletConnectAction
 import com.tangem.tap.features.shop.redux.ShopAction
 import com.tangem.wallet.R
 import com.tangem.wallet.databinding.ActivityMainBinding
+import java.lang.ref.WeakReference
+import kotlin.coroutines.CoroutineContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import java.lang.ref.WeakReference
-import kotlin.coroutines.CoroutineContext
 
 lateinit var tangemSdk: TangemSdk
 lateinit var tangemSdkManager: TangemSdkManager
@@ -48,10 +48,20 @@ val mainScope = CoroutineScope(mainCoroutineContext)
 
 class MainActivity : AppCompatActivity(), SnackbarHandler {
 
+    val a = "AAAAAAAAAAAAAAAAAAAAAAaAAaaaaAAAAaaaAAaAaAAAAAaaaAaAAAAAAAAAAAAAAAAAAAAAAaAAaaaaAAAAaaaAAaAaAAAAAaaaAaAAAAAAAAAAAAAAAAAAAAAAaAAaaaaAAAAaaaAAaAaAAAAAaaaAa"
+
     private var snackbar: Snackbar? = null
     private val dialogManager = DialogManager()
     private val intentHandler = IntentHandler()
     private val binding: ActivityMainBinding by viewBinding(ActivityMainBinding::bind)
+
+
+
+
+
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
