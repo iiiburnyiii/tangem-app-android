@@ -1,17 +1,27 @@
 name: Ktlint
-on: [ push ]
+on:
+  pull_request:
+    paths:
+      - '**/**.kt'
+      - '!**/generated/**'
+      - '!**/build/**'
+
 jobs:
-  run_linter:
+  ktlint:
+    name: Run ktlint
     runs-on: ubuntu-latest
+
     steps:
       - name: Clone repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - name: ktlint
+
+      - name: action-ktlint
         uses: ScaCap/action-ktlint@master
         with:
           github_token: ${{ secrets.github_token }}
+          ktlint_version: '0.46.1'
           relative: true
           fail_on_error: true
-          reporter: github-pr-review # Change reporter
+          reporter: github-pr-check
