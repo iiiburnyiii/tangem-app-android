@@ -38,6 +38,13 @@ class HomeFragment : Fragment(), StoreSubscriber<HomeState> {
     ): View? {
         val context = container?.context ?: return null
 
+
+
+
+        val a = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+
+
         store.dispatch(BackupAction.CheckForUnfinishedBackup)
         composeView = ComposeView(context).apply {
             setContent {
